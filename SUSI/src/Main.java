@@ -11,5 +11,14 @@ public class Main {
         TeacherConsolePrinter t=new TeacherConsolePrinter();
         s.print((Student)people.getFirst());
         t.print((Teacher)people.get(1));
+        ArrayList<Master> coreMasters=new ArrayList<Master>(Arrays.asList(Master.CS,Master.SE));
+        ArrayList<Master> electiveMasters=new ArrayList<Master>(Arrays.asList(Master.Maths,Master.Informatics));
+        Core Algebra=new Core("algebra",7,coreMasters,1,1,Department.Algebra);
+        Elective mod3d=new Elective("3D Mod",6,electiveMasters,2,1,ElectiveType.QKN);
+        CoreConsolePrinter c=new CoreConsolePrinter();
+        ElectiveConsolePrinter e=new ElectiveConsolePrinter();
+        c.print(Algebra);
+        e.print(mod3d);
+
     }
 }
